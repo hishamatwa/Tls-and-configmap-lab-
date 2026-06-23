@@ -1,0 +1,7 @@
+# TLS generated files
+*.key
+*.crt
+nginx-local.key
+nginx-local.crt
+tls.key
+tls.crt

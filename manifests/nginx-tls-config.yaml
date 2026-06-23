@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-tls-config
+  namespace: nginx-tls
+data:
+  default.conf: |
+    server {
+        listen 443 ssl;
+        server_name nginx.local;
+
+        ssl_certificate /etc/nginx/tls/tls.crt;
+        ssl_certificate_key /etc/nginx/tls/tls.key;
+
+        location / {
+            root /usr/share/nginx/html;
+            index index.html;
+        }
+    }
