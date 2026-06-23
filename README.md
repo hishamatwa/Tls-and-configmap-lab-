@@ -4,7 +4,6 @@
 
 This task deploys an Nginx application on Kubernetes and configures it to work with HTTPS using a TLS certificate.
 
-Ingress was not used in this task.
 Instead, Nginx itself was configured to listen on HTTPS port 443.
 
 The application was exposed outside the cluster using a NodePort Service.
